@@ -12,7 +12,7 @@ echo '###'                        >> /etc/hostapd/hostapd.conf
 echo ''                           >> /etc/hostapd/hostapd.conf
 echo 'interface=wlan0'            >> /etc/hostapd/hostapd.conf
 echo 'driver=nl80211'             >> /etc/hostapd/hostapd.conf
-echo 'ssid=Drovosek WiFi'         >> /etc/hostapd/hostapd.conf
+echo 'ssid=DrovosekWiFi'          >> /etc/hostapd/hostapd.conf
 echo 'channel=6'                  >> /etc/hostapd/hostapd.conf
 echo 'wmm_enabled=1'              >> /etc/hostapd/hostapd.conf
 echo 'wpa=1'                      >> /etc/hostapd/hostapd.conf
