@@ -1,0 +1,27 @@
+Main links:
+http://www.daveconroy.com/using-your-raspberry-pi-as-a-wireless-router-and-web-server/
+https://www.maketecheasier.com/set-up-raspberry-pi-as-wireless-access-point/
+https://exain.wordpress.com/2011/03/31/making-a-wifi-hotspot-access-point-using-linux-wifi-lan-cardusb-adapter/
+https://nims11.wordpress.com/2012/04/27/hostapd-the-linux-way-to-create-virtual-wifi-access-point/comment-page-9/
+http://elinux.org/RPI-Wireless-Hotspot
+
+Distribution:
+https://www.raspberrypi.org/downloads/raspbian/
+RASPBIAN WHEEZY
+https://downloads.raspberrypi.org/raspbian/images/raspbian-2015-05-07/2015-05-05-raspbian-wheezy.zip
+https://downloads.raspberrypi.org/raspbian/images/raspbian-2015-05-07/2015-05-05-raspbian-wheezy.zip.torrent
+
+Instruction:
+sudo raspi-config
+expand_rootfs
+sudo shutdown -r now
+sudo apt-get install -y git
+sudo git checkout https://github.com/lfway/drovosek.git
+cd drovosek
+sudo ./ install-packages.sh
+sudo hostapd -B /etc/hostapd/hostapd.conf
+sudo /etc/init.d/isc-dhcp-server restart
+sudo nano /etc/default/hostapd
+uncomment DAEMON_CONF="/etc/hostapd/hostapd.conf"
+
+install apache
